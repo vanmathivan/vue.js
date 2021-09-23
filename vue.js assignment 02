@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>que-02Vue.js</title>
+</head>
+
+<body>
+    <div id="root1"></div>
+    <div id="root2"></div>
+
+    <script type="module">
+
+        import Vue from './vue.esm.browser.js'
+        new Vue({
+            el: '#root1',
+            template: `
+           <div>
+            <h2>SignIn</h2>
+            <form id="login-form" action="/login">
+                    <label for="username">Username
+                    <input type="text" id="username" placeholder="username"></label></br>
+                    <label for="password">Password
+                    <input type="password" id="password" placeholder="password"></label></br>
+                    <button type="submit" @click="">submit</button>
+                </form>
+            </div>
+`,
+        })
+        new Vue({
+            el: '#root2',
+            template: `
+            <div>
+                <h2> SignUp</h2>
+                <form id="signup-form" action="/signup">
+                    <label for="user">Choose Username
+                    <input type="text" id="user" placeholder="Username"></label></br>
+                    <label for="pass">Choose Password
+                    <input type="password" id="pass" placeholder="Password"></label></br>
+                    <label for="confirm-pass">Confirm Password
+                    <input type="password" id="confirm-pass" placeholder="Confirm Password"></label></br>
+                    <button type="submit" @click="">submit</button>
+                </form>
+                </div>
+           
+`,
+        })
+
+    </script>
+</body>
+
+</html>
