@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>que-02Vue.js</title>
+</head>
+
+<body>
+    <div id="product"></div>
+
+
+    <script type="module">
+
+        import Vue from './vue.esm.browser.js'
+        new Vue({
+            el: '#product',
+            template: `
+           <div>
+                <p>Product Name: {{name}} </p>
+                <p>Price of product: {{price}} </p>
+                <ul>
+                     <li v-for="colors in colors"> {{colors}} </li>
+                </ul>
+            </div>
+`,
+
+            data: {
+                name: 'Apple iPhoen 12',
+                price: '900',
+                colors: ['Space Gray', 'White', 'Red']
+            }
+        })
+
+    </script>
+</body>
+
+</html>
